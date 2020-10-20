@@ -1,18 +1,12 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Files #
+*.log
+*.jtl
+.DS_Store
 
-# Other files and folders
-.settings/
+# Package Files #
+*.jar
+*.war
+*.ear
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Folders #
+/apache-jmeter/*
