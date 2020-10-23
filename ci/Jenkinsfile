@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages{
+        stage ('Newman Tests'){
+            steps{
+                sh '''
+                cd api/newman
+                newman run Examen.postman_collection.json -e herokuExamen.postman_environment.json
+                '''
+            }
+
+        }
+
+    }
+
+
+
+
+}
