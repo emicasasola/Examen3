@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "9afbf765-757f-4ccf-bb96-30bbdbebe5e0",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49a23e9f-b134-497c-9de6-e2f9071e8471",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Listos para el examen\");",
+							"});",
+							"",
+							"//pm.test(\"Content-Type is present\", function () {",
+							" //   pm.response.to.have.header(\"application/json; charset=utf-8\");",
+							"//});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/status",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "randomNameNoAuth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4ef73506-13ad-4463-8e95-f29d7637b5b4",
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Please login first\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/randomName",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"randomName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/putName",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"putName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "randomNameWithAuth",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/randomName",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"randomName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sameName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a741d11-5ca6-4a39-9006-f32c79648f53",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"Undertaker\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/sameName",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sameName"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
