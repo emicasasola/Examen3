@@ -92,12 +92,12 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/putName",
+					"raw": "{{base_url}}/updateName",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"putName"
+						"updateName"
 					]
 				}
 			},
