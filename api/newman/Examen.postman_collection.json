@@ -98,9 +98,9 @@
 					"script": {
 						"id": "63519c19-a568-4f1f-9302-3f991778d2c4",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
+							"//pm.test(\"Status code is 200\", function () {",
+							"  //  pm.response.to.have.status(200);",
+							"//});"
 						],
 						"type": "text/javascript"
 					}
