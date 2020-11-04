@@ -3,14 +3,10 @@ pipeline {
     stages {
         stage('Newman Tests') {
             steps {
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     sh '''
-                    export PATH=/usr/local/bin/node:$PATH
-                    node --version
                     cd api/newman
                     newman run Examen.postman_collection.json -e herokuExamen.postman_environment.json               
                     '''
-                }
             }
         }
         //stage('RestAssured Tests') {
