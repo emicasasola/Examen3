@@ -23,6 +23,7 @@ pipeline {
             steps {
                 sh '''
                 cd load
+                export PATH=/home/pjcalvov/jmeter/apache-jmeter-5.3/bin:$PATH
                 jmeter -n -t examen_test_plan.jmx
                 '''
             }
