@@ -13,24 +13,24 @@ pipeline {
                 }
             }
         }
-        stage('RestAssured Tests') {
-            steps {
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    sh '''
-                        cd api/rest_assured
-                        mvn clean test
-                        '''
-                }
-            }              
-        }
-        stage('Jmeter Tests') {
-            steps {
-                sh '''
-                cd load
-                export PATH=/home/pjcalvov/jmeter/apache-jmeter-5.3/bin:$PATH
-                jmeter -n -t examen_test_plan.jmx
-                '''
-            }
-        }
+        //stage('RestAssured Tests') {
+           // steps {
+              //  catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                //    sh '''
+                  //      cd api/rest_assured
+                    //    mvn clean test
+                      //  '''
+            //    }
+          //  }              
+        //}
+       // stage('Jmeter Tests') {
+         //   steps {
+           //     sh '''
+             //   cd load
+               // export PATH=/home/pjcalvov/jmeter/apache-jmeter-5.3/bin:$PATH
+                //jmeter -n -t examen_test_plan.jmx
+                //'''
+            //}
+        //}
     }
 }
