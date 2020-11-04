@@ -39,11 +39,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/status",
+					"raw": "{{base_url}}/v1/examen/status",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"v1",
+						"examen",
 						"status"
 					]
 				}
@@ -75,11 +77,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/randomName",
+					"raw": "{{base_url}}/v1/examen/randomName",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"v1",
+						"examen",
 						"randomName"
 					]
 				}
@@ -88,15 +92,31 @@
 		},
 		{
 			"name": "putName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "63519c19-a568-4f1f-9302-3f991778d2c4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/updateName",
+					"raw": "{{base_url}}/v1/examen/updateName",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"v1",
+						"examen",
 						"updateName"
 					]
 				}
@@ -105,6 +125,20 @@
 		},
 		{
 			"name": "randomNameWithAuth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "059dc606-e6bb-4d4d-a209-93d328b025fe",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('name');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -124,11 +158,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/randomName",
+					"raw": "{{base_url}}/v1/examen/randomName",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"v1",
+						"examen",
 						"randomName"
 					]
 				}
@@ -164,11 +200,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/sameName",
+					"raw": "{{base_url}}/v1/examen/sameName",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"v1",
+						"examen",
 						"sameName"
 					]
 				}
