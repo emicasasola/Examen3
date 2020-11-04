@@ -19,14 +19,13 @@ pipeline {
             //    }
           //  }              
         //}
-       // stage('Jmeter Tests') {
-         //   steps {
-           //     sh '''
-             //   cd load
-               // export PATH=/home/pjcalvov/jmeter/apache-jmeter-5.3/bin:$PATH
-                //jmeter -n -t examen_test_plan.jmx
-                //'''
-            //}
-        //}
+        stage('Jmeter Tests') {
+            steps {
+                sh '''
+                cd load
+                jmeter -n -t examen_test_plan.jmx
+                '''
+            }
+        }
     }
 }
