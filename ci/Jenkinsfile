@@ -9,16 +9,16 @@ pipeline {
                     '''
             }
         }
-        //stage('RestAssured Tests') {
-           // steps {
-              //  catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                //    sh '''
-                  //      cd api/rest_assured
-                    //    mvn clean test
-                      //  '''
-            //    }
-          //  }              
-        //}
+        stage('RestAssured Tests') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh '''
+                        cd api/restassured
+                        mvn clean test
+                        '''
+                }
+            }              
+        }
         stage('Jmeter Tests') {
             steps {
                 sh '''
