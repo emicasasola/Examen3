@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-localhost">
-              <span class="suite-name border-failed">localhost</span>
+              <span class="suite-name border-passed">localhost</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-localhost" class="hide-methods failed suite-localhost"> (hide)</a> <!-- hide-methods failed suite-localhost -->
-                      <a href="#" panel-name="suite-localhost" class="show-methods failed suite-localhost"> (show)</a> <!-- show-methods failed suite-localhost -->
-                    </span>
-                    <div class="method-list-content failed suite-localhost">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-localhost" title="Tests" hash-for-method="PostSameName_Test">PostSameName_Test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-localhost -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -131,6 +117,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-localhost" title="Tests" hash-for-method="PostSameName_Test">PostSameName_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-localhost" title="Tests" hash-for-method="PutName_Test">PutName_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -146,49 +137,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-localhost" class="panel localhost">
-          <div class="suite-localhost-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Tests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PostSameName_Test">
-                  </a> <!-- PostSameName_Test -->
-                  <span class="method-name">PostSameName_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at Tests.PostSameName_Test(Tests.java:68)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 46 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-localhost-class-failed -->
           <div class="suite-localhost-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -218,6 +166,13 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="PostSameName_Test">
+                  </a> <!-- PostSameName_Test -->
+                  <span class="method-name">PostSameName_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="PutName_Test">
                   </a> <!-- PutName_Test -->
                   <span class="method-name">PutName_Test</span>
@@ -236,11 +191,11 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;localhost&quot;&gt;
   &lt;parameter name=&quot;baseUrl&quot; value=&quot;https://api-coffee-testing.herokuapp.com&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Regression&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;ExamenFinal3&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Tests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Regression --&gt;
+  &lt;/test&gt; &lt;!-- ExamenFinal3 --&gt;
 &lt;/suite&gt; &lt;!-- localhost --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -252,7 +207,7 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Regression (1 class)</span>
+                <span class="test-name">ExamenFinal3 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -282,23 +237,23 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'GetRandomNameNoAuth_Test')
 data.setCell(0, 2, 'Tests')
-data.setCell(0, 3, 2391);
+data.setCell(0, 3, 1743);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'GetRandomName_Test')
 data.setCell(1, 2, 'Tests')
-data.setCell(1, 3, 599);
+data.setCell(1, 3, 700);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'GetStatus_Test')
+data.setCell(2, 1, 'PostSameName_Test')
 data.setCell(2, 2, 'Tests')
-data.setCell(2, 3, 596);
+data.setCell(2, 3, 550);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'PostSameName_Test')
+data.setCell(3, 1, 'GetStatus_Test')
 data.setCell(3, 2, 'Tests')
-data.setCell(3, 3, 591);
+data.setCell(3, 3, 529);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'PutName_Test')
 data.setCell(4, 2, 'Tests')
-data.setCell(4, 3, 516);
+data.setCell(4, 3, 525);
 window.suiteTableData['localhost']= { tableData: data, tableDiv: 'times-div-localhost'}
 return data;
 }
@@ -336,45 +291,43 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">709 ms</span>
+                <span class="method-start">390 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">GetRandomNameNoAuth_Test</span>
-                <span class="method-start">710 ms</span>
+                <span class="method-start">391 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">3103 ms</span>
+                <span class="method-start">2136 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">GetRandomName_Test</span>
-                <span class="method-start">3104 ms</span>
+                <span class="method-start">2137 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">3703 ms</span>
+                <span class="method-start">2838 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">GetStatus_Test</span>
-                <span class="method-start">3704 ms</span>
+                <span class="method-start">2838 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">4301 ms</span>
+                <span class="method-start">3368 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">PostSameName_Test</span>
-                <span class="method-start">4301 ms</span>
+                <span class="method-start">3368 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">4899 ms</span>
+                <span class="method-start">3918 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">PutName_Test</span>
-                <span class="method-start">4899 ms</span>
+                <span class="method-start">3919 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
